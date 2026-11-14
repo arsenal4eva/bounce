@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://y60gf5oacqyw" path="res://spikes.tscn" id="3_5mrt3"]
 [ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="3_rwowx"]
 [ext_resource type="PackedScene" uid="uid://dvkwloa1bqnri" path="res://jump_pad.tscn" id="5_rwowx"]
+[ext_resource type="PackedScene" uid="uid://1r8gg6fpxjpp" path="res://moving_jump_pad.tscn" id="6_hu44a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdn2g"]
 size = Vector2(134.5, 42.5)
@@ -77,7 +78,10 @@ shape = SubResource("RectangleShape2D_rg72a")
 position = Vector2(-105, 49)
 
 [node name="spikes" parent="." unique_id=398212273 instance=ExtResource("3_5mrt3")]
-position = Vector2(383, 410)
+position = Vector2(88, 376)
 
 [node name="Node2D" parent="." unique_id=597283379 instance=ExtResource("5_rwowx")]
 position = Vector2(-777, 132)
+
+[node name="moving_pad" parent="." unique_id=1990761560 instance=ExtResource("6_hu44a")]
+position = Vector2(-731, -1)

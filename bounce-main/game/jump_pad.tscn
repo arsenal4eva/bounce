@@ -29,11 +29,14 @@ skew = 0.37175512
 position = Vector2(-4.480591, 3.970642)
 shape = SubResource("RectangleShape2D_17ubn")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=737854236]
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=737854236]
+position = Vector2(-1388.928, -270.99704)
+scale = Vector2(0.927536, 1.0564834)
+skew = -0.3493606
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=687004773]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=687004773]
 position = Vector2(1384.5425, 276.10693)
 skew = 0.37175512
 shape = SubResource("RectangleShape2D_oeeh7")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
