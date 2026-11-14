@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cxf3nn8fb22g5"]
+
+[ext_resource type="Texture2D" uid="uid://bjm2wsv8ogoh" path="res://placeholder.png" id="1_8gf4p"]
+[ext_resource type="Script" uid="uid://cttogkwartklo" path="res://rules.gd" id="1_xvbjr"]
+
+[node name="Rules" type="Node2D" unique_id=604127141]
+script = ExtResource("1_xvbjr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1480288066]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_8gf4p")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1492695636]
+offset_left = 401.0
+offset_top = 48.0
+offset_right = 741.0
+offset_bottom = 118.0
+theme_override_font_sizes/normal_font_size = 50
+text = "HOW TO PLAY"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1730707697]
+offset_left = 402.0
+offset_top = 156.0
+offset_right = 788.0
+offset_bottom = 346.0
+text = "1. The aim is to get to the other side of the room
+2. The player can be moved using A and D
+3. Use trampolines for jumps
+4. Trampolines cannot be reused
+5. Drag trampolines onto the map
+6. Avoid obstacles
+7. Trampolines can only be placed once you reach a checkpoint"
+fit_content = true
+
+[node name="Tutorial" type="Button" parent="." unique_id=783242933]
+offset_left = 406.0
+offset_top = 412.0
+offset_right = 459.0
+offset_bottom = 441.0
+text = "Tutorial"
+
+[node name="Game" type="Button" parent="." unique_id=1214549455]
+offset_left = 676.0
+offset_top = 401.0
+offset_right = 790.0
+offset_bottom = 463.0
+text = "Let's play!"
+
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Game" to="." method="_on_game_pressed"]

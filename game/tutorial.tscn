@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://rjamfiwq8e4x"]
+
+[ext_resource type="Texture2D" uid="uid://bjm2wsv8ogoh" path="res://placeholder.png" id="1_ehuit"]
+[ext_resource type="Texture2D" uid="uid://beljguljydy1r" path="res://block.png" id="2_5mrt3"]
+[ext_resource type="PackedScene" uid="uid://y60gf5oacqyw" path="res://spikes.tscn" id="3_5mrt3"]
+[ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="3_rwowx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdn2g"]
+size = Vector2(141, 40)
+
+[node name="Tutorial" type="Node2D" unique_id=793042349]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1026021813]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ehuit")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1656196643]
+offset_left = 1.0
+offset_top = 323.0
+offset_right = 142.0
+offset_bottom = 363.0
+texture = ExtResource("2_5mrt3")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1949410279]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=459768355]
+position = Vector2(71, 343)
+shape = SubResource("RectangleShape2D_tdn2g")
+
+[node name="Player" parent="." unique_id=983713674 instance=ExtResource("3_rwowx")]
+position = Vector2(-130, 130)
+
+[node name="spikes" parent="." unique_id=398212273 instance=ExtResource("3_5mrt3")]
+position = Vector2(110, 422)
