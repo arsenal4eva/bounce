@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxf3nn8fb22g5"]
 
-[ext_resource type="Texture2D" uid="uid://bjm2wsv8ogoh" path="res://placeholder.png" id="1_8gf4p"]
+[ext_resource type="Texture2D" uid="uid://nvxhn6i3aox3" path="res://placeholder.png" id="1_8gf4p"]
 [ext_resource type="Script" uid="uid://cttogkwartklo" path="res://rules.gd" id="1_xvbjr"]
 
 [node name="Rules" type="Node2D" unique_id=604127141]
@@ -23,10 +23,10 @@ fit_content = true
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1730707697]
 offset_left = 402.0
 offset_top = 156.0
-offset_right = 788.0
-offset_bottom = 346.0
+offset_right = 832.0
+offset_bottom = 363.0
 text = "1. The aim is to get to the other side of the room
-2. The player can be moved using A and D
+2. The player can be moved using left and right arrows
 3. Use trampolines for jumps
 4. Trampolines cannot be reused
 5. Drag trampolines onto the map

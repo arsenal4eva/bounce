@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://c7kj3nbvasfdh"]
 
+[ext_resource type="Texture2D" uid="uid://nvxhn6i3aox3" path="res://placeholder.png" id="1_p04yf"]
+[ext_resource type="Script" uid="uid://dxsxq7vlbtuk" path="res://betweenlevels.gd" id="1_pjuym"]
+
 [node name="betweenlevels" type="Node2D" unique_id=317799037]
+script = ExtResource("1_pjuym")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1064994647]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_p04yf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1725226996]
+offset_left = 461.0
+offset_top = 98.0
+offset_right = 657.0
+offset_bottom = 168.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Level #"
+
+[node name="continue" type="Button" parent="." unique_id=1881171668]
+offset_left = 368.0
+offset_top = 264.0
+offset_right = 457.0
+offset_bottom = 350.0
+text = "Continue"
+
+[node name="replay" type="Button" parent="." unique_id=769565305]
+offset_left = 609.0
+offset_top = 288.0
+offset_right = 740.0
+offset_bottom = 324.0
+text = "Replay previous"
+
+[connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="replay" to="." method="_on_replay_pressed"]
