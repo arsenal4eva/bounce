@@ -28,7 +28,12 @@ func _build() -> void:
 
 	var d := UI.label("You solved all %d levels. That was a lot of bouncing." % Global.TOTAL_LEVELS,
 		22, UI.TEXT)
+	var p := UI.label("The least amount of trampolines needed for us (the devs) is 15")
+	var t := UI.label("Can you beat us?")
 	b.add_child(d)
+	b.add_child(p)
+	b.add_child(t)
+
 
 	var letrampoline := HBoxContainer.new()
 	letrampoline.alignment = BoxContainer.ALIGNMENT_CENTER
