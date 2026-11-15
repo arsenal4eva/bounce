@@ -1,7 +1,3 @@
-res://player.tscn
-res://player.gd
-res://level.gd
-res://rules.tscn
-res://level_data.gd
 res://level_1.tscn
-res://level_6.tscn
+res://level_data.gd
+res://level_2.tscn
