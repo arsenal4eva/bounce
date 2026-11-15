@@ -120,7 +120,7 @@ static func _level_2() -> Dictionary:
 	_spike_row(skibidi, 7, 17, 9, "up")
 	_spike_row(skibidi, 26, 17, 9, "up")
 	_solid(skibidi, 20, 14, 2, 4)
-	_solid(skibidi, 15, 11, 12, 1)
+	_solid(skibidi, 15, 0, 12, 12)
 	_spike_row(skibidi, 15, 12, 12, "down")
 	_solid(skibidi, 37, 15, 4, 1)
 	return skibidi
