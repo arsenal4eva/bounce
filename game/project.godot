@@ -27,6 +27,7 @@ window/stretch/aspect="expand"
 
 [physics]
 
+common/physics_ticks_per_second=200
 2d/default_gravity=1500.0
 
 [rendering]
