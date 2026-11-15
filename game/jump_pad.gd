@@ -6,7 +6,7 @@ const ROTATING := 1
 const MOVING := 2
 
 @export_enum("Placed", "Rotating", "Moving") var letype: int = PLACED
-@export var lespeed := 900.0
+@export var lespeed := 800.0
 @export var lespin := 1.0
 @export var ledir := 1
 

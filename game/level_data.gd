@@ -54,6 +54,11 @@ static func _solid(skibidi: Dictionary, a: int, b: int, c: int, d: int) -> void:
 	skibidi["solids"].append(Rect2i(a, b, c, d))
 
 
+static func _solid_spike(skibidi: Dictionary, a: int, b: int, c: int, d: int, e:int) -> void:
+	_solid(skibidi,a,b,c,d)
+	_spike_row(skibidi,a,e,c,"up")
+
+
 static func _spike(skibidi: Dictionary, a: int, b: int, c: String = "up") -> void:
 	skibidi["spikes"].append({"cell": Vector2i(a, b), "dir": c})
 
@@ -91,20 +96,20 @@ static func _wall(skibidi: Dictionary, a: int, b: int, c: int, d: int = 1,
 
 
 static func _tutorial() -> Dictionary:
-	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 2)
+	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 3)
 	_solid(skibidi, 0, 15, 32, 1)
 	_solid(skibidi, 0, 14, 9, 1)
 	_solid(skibidi, 17, 14, 15, 1)
 	_spike_row(skibidi, 9, 14, 8, "up")
-	_solid(skibidi, 24, 10, 2, 4)
+	_solid_spike(skibidi, 24, 10, 1, 4, 9)
 	return skibidi
 
 
 static func _level_1() -> Dictionary:
-	var skibidi := _base(40, 20, Vector2i(4, 17), Vector2i(39, 14), 4, 3)
+	var skibidi := _base(40, 20, Vector2i(4, 17), Vector2i(39, 14), 4, 2)
 	_solid(skibidi, 0, 18, 40, 2)
 	_spike_row(skibidi, 9, 17, 8, "up")
-	_solid(skibidi, 27, 14, 2, 4)
+	_solid_spike(skibidi, 27, 14, 2, 4, 13)
 	_spike_row(skibidi, 32, 17, 4, "up")
 	return skibidi
 
@@ -114,10 +119,9 @@ static func _level_2() -> Dictionary:
 	_solid(skibidi, 0, 18, 44, 2)
 	_spike_row(skibidi, 7, 17, 9, "up")
 	_spike_row(skibidi, 26, 17, 9, "up")
-	_solid(skibidi, 20, 14, 2, 4)
-	_solid(skibidi, 15, 11, 12, 1)
-	_spike_row(skibidi, 15, 12, 12, "down")
-	_solid(skibidi, 37, 15, 4, 1)
+	_solid_spike(skibidi, 20, 15, 2, 4, 14)
+	_solid(skibidi, 15, 0, 12, 11)
+	_spike_row(skibidi, 15, 11, 12, "down")
 	return skibidi
 
 
@@ -132,11 +136,12 @@ static func _level_3() -> Dictionary:
 	_solid(skibidi, 39, 4, 5, 3)
 	_spike_row(skibidi, 16, 15, 2, "up")
 	_spike_row(skibidi, 26, 11, 2, "up")
+	_spike_row(skibidi,36,7,2,"up")
 	return skibidi
 
 
 static func _level_4() -> Dictionary:
-	var skibidi := _base(48, 22, Vector2i(4, 18), Vector2i(47, 15), 4, 3)
+	var skibidi := _base(48, 22, Vector2i(4, 18), Vector2i(47, 15), 4, 2)
 	_solid(skibidi, 0, 19, 8, 3)
 	_solid(skibidi, 8, 21, 32, 1)
 	_spike_row(skibidi, 8, 20, 32, "up")
@@ -148,18 +153,15 @@ static func _level_4() -> Dictionary:
 
 
 static func _level_5() -> Dictionary:
-	var skibidi := _base(52, 24, Vector2i(4, 19), Vector2i(51, 0), 4, 3)
+	var skibidi := _base(52, 24, Vector2i(4, 19), Vector2i(51, 0), 4, 2)
 	_solid(skibidi, 8, 23, 44, 1)
 	_spike_row(skibidi, 8, 22, 44, "up")
-	_solid(skibidi, 0, 20, 8, 4)
-	_solid(skibidi, 12, 16, 7, 3)
-	_solid(skibidi, 23, 12, 7, 3)
-	_solid(skibidi, 34, 8, 7, 3)
+	_solid(skibidi, 23, 12, 9, 3)
 	_solid(skibidi, 45, 4, 7, 3)
 	_rotating(skibidi, 10, 17, 20.0, 0.9)
-	_rotating(skibidi, 21, 13, -30.0, 0.9)
-	_rotating(skibidi, 32, 9, 15.0, 0.9)
-	_rotating(skibidi, 43, 5, -20.0, 0.9)
+	#_rotating(skibidi, 21, 13, -30.0, 0.9)
+	_rotating(skibidi, 35, 9, 15.0, 0.9)
+	#_rotating(skibidi, 43, 5, -20.0, 0.9)
 	return skibidi
 
 
@@ -172,8 +174,8 @@ static func _level_6() -> Dictionary:
 	_solid(skibidi, 37, 23, 8, 1)
 	_spike_row(skibidi, 37, 22, 8, "up")
 	_solid(skibidi, 45, 20, 11, 4)
-	_solid(skibidi, 18, 16, 1, 8)
-	_solid(skibidi, 37, 16, 1, 8)
+	_solid_spike(skibidi, 18, 16, 1, 8,15)
+	_solid_spike(skibidi, 37, 16, 1, 8,15)
 	_wall(skibidi, 22, 19, 4, 1, 70.0)
 	_wall(skibidi, 29, 19, 3, -1, 90.0)
 	_ball(skibidi, 27, 19)

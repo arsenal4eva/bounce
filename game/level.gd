@@ -14,7 +14,7 @@ const START_BLOCK_SCENE := preload("res://block.tscn")
 const TILE_TEXTURE := preload("res://block.png")
 const PAD_ICON := preload("res://trampoline.png")
 
-const PLAY_CAMERA_ZOOM := 2.5
+const PLAY_CAMERA_ZOOM := 1.5
 
 @export var level_number := 1
 
