@@ -1,33 +1,28 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://d26t65x2i3pd6"]
 
-[ext_resource type="Script" path="res://spikes.gd" id="1_spike"]
-[ext_resource type="Texture2D" path="res://wall.png" id="2_wall"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_spike"]
-atlas = ExtResource("2_wall")
-region = Rect2(0, 4, 17, 12)
+[ext_resource type="Script" uid="uid://bkl8c2ndik65i" path="res://spikes.gd" id="1_spike"]
+[ext_resource type="Texture2D" uid="uid://c0wqt7wioj01u" path="res://the_spike.png" id="2_nrdsm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spike"]
-size = Vector2(24, 28)
+size = Vector2(12, 10)
 
-[node name="Spikes" type="Node2D"]
+[node name="Spikes" type="Node2D" unique_id=422998535]
 z_index = 8
 script = ExtResource("1_spike")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=288427766]
+position = Vector2(-0.002539929, -0.0020065876)
 rotation = -1.5707964
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_spike")
+scale = Vector2(0.006838708, 0.0058490573)
+texture = ExtResource("2_nrdsm")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=905853863]
 collision_layer = 4
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1945562823]
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_spike")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

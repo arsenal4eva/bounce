@@ -20,7 +20,7 @@ var _b := 0.0
 var _c := 1
 var _skibidi: Tween = null
 
-@onready var bouncy: Sprite2D = $Sprite2D
+@onready var bouncy: AnimatedSprite2D = $animate
 
 
 func _ready() -> void:
@@ -30,14 +30,18 @@ func _ready() -> void:
 func _physics_process(d: float) -> void:
 	if lefrozen:
 		velocity = Vector2.ZERO
+		bouncy.set_animation("idle")
 		return
 
 	if not is_on_floor():
 		velocity.y += GRAVITY * d
 		velocity.y = minf(velocity.y, MAX_FALL)
 		_a = maxf(0.0, _a - d)
+		bouncy.set_animation("jump")
 	else:
 		_a = COYOTE_TIME
+		if bouncy.animation != "right":
+			bouncy.play("right")
 
 	if lecontrolled:
 		var ledirection := Input.get_axis("ui_left", "ui_right")
@@ -71,6 +75,10 @@ func _update_sprite() -> void:
 	if bouncy == null:
 		return
 	bouncy.flip_h = _c < 0
+	if velocity.x == 0.0:
+		bouncy.stop()
+	else:
+		bouncy.play()
 
 
 func launch(lelaunch: Vector2) -> void:
