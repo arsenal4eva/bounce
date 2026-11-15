@@ -54,9 +54,9 @@ static func _solid(skibidi: Dictionary, a: int, b: int, c: int, d: int) -> void:
 	skibidi["solids"].append(Rect2i(a, b, c, d))
 
 
-static func _solid_spike(skibidi: Dictionary, a: int, b: int, c: int, d: int) -> void:
+static func _solid_spike(skibidi: Dictionary, a: int, b: int, c: int, d: int, e:int) -> void:
 	_solid(skibidi,a,b,c,d)
-	_spike(skibidi,a,2*d-1,"up")
+	_spike(skibidi,a,e,"up")
 
 
 static func _spike(skibidi: Dictionary, a: int, b: int, c: String = "up") -> void:
@@ -101,7 +101,7 @@ static func _tutorial() -> Dictionary:
 	_solid(skibidi, 0, 14, 9, 1)
 	_solid(skibidi, 17, 14, 15, 1)
 	_spike_row(skibidi, 9, 14, 8, "up")
-	_solid(skibidi, 24, 10, 2, 4)
+	_solid_spike(skibidi, 24, 10, 1, 4, 9)
 	return skibidi
 
 
@@ -177,8 +177,8 @@ static func _level_6() -> Dictionary:
 	_solid(skibidi, 37, 23, 8, 1)
 	_spike_row(skibidi, 37, 22, 8, "up")
 	_solid(skibidi, 45, 20, 11, 4)
-	_solid_spike(skibidi, 18, 16, 1, 8)
-	_solid_spike(skibidi, 37, 16, 1, 8)
+	_solid_spike(skibidi, 18, 16, 1, 8,15)
+	_solid_spike(skibidi, 37, 16, 1, 8,15)
 	_wall(skibidi, 22, 19, 4, 1, 70.0)
 	_wall(skibidi, 29, 19, 3, -1, 90.0)
 	_ball(skibidi, 27, 19)
