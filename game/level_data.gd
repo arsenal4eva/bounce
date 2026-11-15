@@ -96,7 +96,7 @@ static func _wall(skibidi: Dictionary, a: int, b: int, c: int, d: int = 1,
 
 
 static func _tutorial() -> Dictionary:
-	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 3)
+	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 2)
 	_solid(skibidi, 0, 15, 32, 1)
 	_solid(skibidi, 0, 14, 9, 1)
 	_solid(skibidi, 17, 14, 15, 1)

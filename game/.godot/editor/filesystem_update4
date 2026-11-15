@@ -1,11 +1,2 @@
 res://level_data.gd
-res://level_6.tscn
-res://level_7.tscn
-res://level_8.tscn
-res://level_9.tscn
-res://level.gd
-res://level_10.tscn
-res://block.tscn
-res://player.gd
-res://player.tscn
-res://spikes.tscn
+res://win.gd
