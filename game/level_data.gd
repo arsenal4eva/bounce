@@ -96,7 +96,7 @@ static func _wall(skibidi: Dictionary, a: int, b: int, c: int, d: int = 1,
 
 
 static func _tutorial() -> Dictionary:
-	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 2)
+	var skibidi := _base(32, 16, Vector2i(4, 13), Vector2i(31, 10), 4, 3)
 	_solid(skibidi, 0, 15, 32, 1)
 	_solid(skibidi, 0, 14, 9, 1)
 	_solid(skibidi, 17, 14, 15, 1)
@@ -106,10 +106,10 @@ static func _tutorial() -> Dictionary:
 
 
 static func _level_1() -> Dictionary:
-	var skibidi := _base(40, 20, Vector2i(4, 17), Vector2i(39, 14), 4, 3)
+	var skibidi := _base(40, 20, Vector2i(4, 17), Vector2i(39, 14), 4, 2)
 	_solid(skibidi, 0, 18, 40, 2)
 	_spike_row(skibidi, 9, 17, 8, "up")
-	_solid(skibidi, 27, 14, 2, 4)
+	_solid_spike(skibidi, 27, 14, 1, 4, 13)
 	_spike_row(skibidi, 32, 17, 4, "up")
 	return skibidi
 
