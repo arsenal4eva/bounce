@@ -61,19 +61,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
-size = Vector2(20, 26)
+size = Vector2(17, 20)
 
-<<<<<<< HEAD
 [node name="Player" type="CharacterBody2D" unique_id=1551808756]
-=======
-[node name="Player" type="CharacterBody2D" unique_id=380406391]
->>>>>>> 51995688b62de1ee6831068959fbfa667bf47368
 z_index = 20
 collision_layer = 2
 floor_snap_length = 6.0
 script = ExtResource("1_player")
 
-<<<<<<< HEAD
 [node name="animate" type="AnimatedSprite2D" parent="." unique_id=1835443961]
 texture_filter = 1
 scale = Vector2(1.65, 1.65)
@@ -81,12 +76,4 @@ sprite_frames = SubResource("SpriteFrames_j4aai")
 animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=820569894]
-=======
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1255226142]
-texture_filter = 1
-scale = Vector2(2, 2)
-texture = ExtResource("2_tex")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=303645083]
->>>>>>> 51995688b62de1ee6831068959fbfa667bf47368
 shape = SubResource("RectangleShape2D_player")
