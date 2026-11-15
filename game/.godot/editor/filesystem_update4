@@ -1,6 +1,7 @@
 res://level_data.gd
-res://level_2.tscn
-res://level_1.tscn
-res://level_4.tscn
-res://jump_pad.gd
-res://level_5.tscn
+res://level_6.tscn
+res://level_7.tscn
+res://level_8.tscn
+res://level_9.tscn
+res://level.gd
+res://level_10.tscn

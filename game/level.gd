@@ -461,12 +461,18 @@ func _build_respawn_overlay() -> void:
 	lebuttons.add_theme_constant_override("separation", 14)
 	lebox.add_child(lebuttons)
 
-	var lecont := UI.button("Continue", Vector2(210, 50))
+	var lecont := UI.button("Continue (R)", Vector2(210, 50))
 	lecont.pressed.connect(_on_respawn_continue)
 	lebuttons.add_child(lecont)
 	var leedit := UI.button("Edit trampolines", Vector2(230, 50))
 	leedit.pressed.connect(_on_respawn_edit)
 	lebuttons.add_child(leedit)
+	var shortcut := Shortcut.new()
+	var key_event := InputEventKey.new()
+	key_event.keycode = KEY_R
+	shortcut.events = [key_event]
+	lecont.shortcut = shortcut
+
 
 
 
