@@ -54,6 +54,11 @@ static func _solid(skibidi: Dictionary, a: int, b: int, c: int, d: int) -> void:
 	skibidi["solids"].append(Rect2i(a, b, c, d))
 
 
+static func _solid_spike(skibidi: Dictionary, a: int, b: int, c: int, d: int) -> void:
+	_solid(skibidi,a,b,c,d)
+	_spike(skibidi,a,2*d-1,"up")
+
+
 static func _spike(skibidi: Dictionary, a: int, b: int, c: String = "up") -> void:
 	skibidi["spikes"].append({"cell": Vector2i(a, b), "dir": c})
 
@@ -172,8 +177,8 @@ static func _level_6() -> Dictionary:
 	_solid(skibidi, 37, 23, 8, 1)
 	_spike_row(skibidi, 37, 22, 8, "up")
 	_solid(skibidi, 45, 20, 11, 4)
-	_solid(skibidi, 18, 16, 1, 8)
-	_solid(skibidi, 37, 16, 1, 8)
+	_solid_spike(skibidi, 18, 16, 1, 8)
+	_solid_spike(skibidi, 37, 16, 1, 8)
 	_wall(skibidi, 22, 19, 4, 1, 70.0)
 	_wall(skibidi, 29, 19, 3, -1, 90.0)
 	_ball(skibidi, 27, 19)

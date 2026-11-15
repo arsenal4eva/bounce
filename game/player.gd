@@ -1,9 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
-const GRAVITY := 1500.0
+const GRAVITY := 1200.0
 const SPEED := 265.0
-const JUMP_VELOCITY := -525.0
+const JUMP_VELOCITY := -450.0
 const GROUND_ACCEL := 2600.0
 const AIR_ACCEL := 1500.0
 const GROUND_FRICTION := 2600.0
