@@ -1,1 +1,4 @@
-res://spikes.tscn
+res://block.tscn
+res://level.gd
+res://player.tscn
+res://player.gd

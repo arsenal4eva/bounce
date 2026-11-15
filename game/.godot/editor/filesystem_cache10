@@ -1,10 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1794708552
+::res://::1794711494
 backdrop.gd::GDScript::2021195315214843353::1794704385::0::1::::Backdrop<>Control<><>0<>0<><>::
 betweenlevels.gd::GDScript::259182089163330134::1794704385::0::1::::<>Node2D<><>0<>0<><>::
 betweenlevels.tscn::PackedScene::7040125281811284977::1794704385::0::1::::<><><>0<>0<><>::uid://nvxhn6i3aox3::::res://placeholder.png<>uid://dxsxq7vlbtuk::::res://betweenlevels.gd
 block.png::CompressedTexture2D::1727194464092049690::1794704385::1794704722::1::::<><><>0<>0<>31f783345729a8d8dc9a9a9b8e43e90a<>res://.godot/imported/block.png-b7fed0a755ada244f74f9622a987e81f.ctex::
-block.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://block.png
+block.tscn::PackedScene::330647687771446068::1794711324::0::1::::<><><>0<>0<><>::uid://yuwv1nk55xwc::::res://block.png
+blocked.png::CompressedTexture2D::8559678679132501001::1794711320::1794711320::1::::<><><>0<>0<>473690bf98a22885dde76a20ad76ccaa<>res://.godot/imported/blocked.png-4b0618f3d956691ef3afa0079aff8c7c.ctex::
 door.gd::GDScript::6558412465371643333::1794704385::0::1::::<>Node2D<><>0<>0<><>::
 door.png::CompressedTexture2D::286734045498908605::1794704385::1794704722::1::::<><><>0<>0<>84228f990099553104abb022bc06aed7<>res://.godot/imported/door.png-4ad4ab0c545155655bbef277d86eb152.ctex::
 door.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://door.gd<>res://door.png
@@ -12,7 +13,7 @@ global.gd::GDScript::1138871773747193964::1794704385::0::1::::<>Node<><>0<>0<><>
 icon.svg::CompressedTexture2D::5653505140951467421::1794704385::1794704722::1::::<><><>0<>0<>822cff418d4e86e41f1f084259aabc0a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 jump_pad.gd::GDScript::2670402314632225044::1794704385::0::1::::JumpPad<>Node2D<><>0<>0<><>::
 jump_pad.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://jump_pad.gd<>res://trampoline.png
-level.gd::GDScript::7196974655642334404::1794704385::0::1::::Level<>Node2D<><>0<>0<><>::
+level.gd::GDScript::7196974655642334404::1794711324::0::1::::Level<>Node2D<><>0<>0<><>::
 level_0.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://level.gd
 level_1.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://level.gd
 level_2.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://level.gd
@@ -32,11 +33,12 @@ placeholder.png::CompressedTexture2D::957216622614045794::1794704385::1794704722
 player.gd::GDScript::8204514824322357894::1794704385::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://player.gd<>res://player_simple.png
 player_simple.png::CompressedTexture2D::1426638311151729445::1794704385::1794704722::1::::<><><>0<>0<>9aec8ff028d07029b1aec22b1a853a71<>res://.godot/imported/player_simple.png-28b89af6db4a8577f5c82733dcedea98.ctex::
+player_tileset.png::CompressedTexture2D::6273572287013742880::1794711494::1794711495::1::::<><><>0<>0<>a57271e693f3c4caf5da76ae10429de6<>res://.godot/imported/player_tileset.png-f2e97a938b2d75d243d1278e40d4a735.ctex::
 rotating_jump_pad.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://jump_pad.gd<>res://trampoline.png
 rules.gd::GDScript::6146513885740788052::1794704385::0::1::::<>Node2D<><>0<>0<><>::
 rules.tscn::PackedScene::6399230684961174174::1794704385::0::1::::<><><>0<>0<><>::uid://nvxhn6i3aox3::::res://placeholder.png<>uid://cttogkwartklo::::res://rules.gd
 spikes.gd::GDScript::3113025946077523696::1794704385::0::1::::<>Node2D<><>0<>0<><>::
-spikes.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://spikes.gd<>res://wall.png
+spikes.tscn::PackedScene::9119567134625216193::1794708877::0::1::::<><><>0<>0<><>::uid://bkl8c2ndik65i::::res://spikes.gd<>uid://c0wqt7wioj01u::::res://the_spike.png
 spike_block.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://block.png<>res://spikes.tscn
 spike_wall.gd::GDScript::7390436609465335207::1794704385::0::1::::<>Node2D<><>0<>0<><>::
 spike_wall.tscn::PackedScene::-1::1794704385::0::1::::<><><>0<>0<><>::res://spike_wall.gd
