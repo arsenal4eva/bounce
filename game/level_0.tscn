@@ -1,72 +1,7 @@
-[gd_scene format=3 uid="uid://b4btodekavx0a"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://nvxhn6i3aox3" path="res://placeholder.png" id="1_v6xcw"]
-[ext_resource type="PackedScene" uid="uid://c24f5n2pouly7" path="res://block.tscn" id="2_smnfn"]
-[ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://player.tscn" id="3_nu7sl"]
-[ext_resource type="PackedScene" uid="uid://y60gf5oacqyw" path="res://spikes.tscn" id="4_nu7sl"]
-[ext_resource type="PackedScene" uid="uid://b1xc7uil4uwun" path="res://door.tscn" id="5_omks2"]
+[ext_resource type="Script" path="res://level.gd" id="1_level"]
 
-[node name="level0" type="Node2D" unique_id=89768036]
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1421129716]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_v6xcw")
-
-[node name="Player" parent="." unique_id=983713674 instance=ExtResource("3_nu7sl")]
-position = Vector2(-130, 65)
-
-[node name="block" parent="." unique_id=1759571606 instance=ExtResource("2_smnfn")]
-position = Vector2(-47, -6)
-
-[node name="block2" parent="." unique_id=1069299397 instance=ExtResource("2_smnfn")]
-position = Vector2(-216, 251)
-rotation = -1.5699579
-
-[node name="block3" parent="." unique_id=1504784612 instance=ExtResource("2_smnfn")]
-position = Vector2(-216, 201.99998)
-rotation = -1.5699579
-
-[node name="block4" parent="." unique_id=2090836920 instance=ExtResource("2_smnfn")]
-position = Vector2(-216.00002, 152.99998)
-rotation = -1.5699579
-
-[node name="block5" parent="." unique_id=486850672 instance=ExtResource("2_smnfn")]
-position = Vector2(-216, 104.99999)
-rotation = -1.5699579
-
-[node name="spikes" parent="." unique_id=398212273 instance=ExtResource("4_nu7sl")]
-position = Vector2(130, 602)
-
-[node name="spikes2" parent="." unique_id=1969692519 instance=ExtResource("4_nu7sl")]
-position = Vector2(229, 602)
-
-[node name="spikes3" parent="." unique_id=1955523396 instance=ExtResource("4_nu7sl")]
-position = Vector2(328, 602)
-
-[node name="spikes4" parent="." unique_id=75409164 instance=ExtResource("4_nu7sl")]
-position = Vector2(428, 602)
-
-[node name="spikes5" parent="." unique_id=1241021658 instance=ExtResource("4_nu7sl")]
-position = Vector2(527, 602)
-
-[node name="spikes6" parent="." unique_id=1734843233 instance=ExtResource("4_nu7sl")]
-position = Vector2(626, 602)
-
-[node name="spikes7" parent="." unique_id=1336597366 instance=ExtResource("4_nu7sl")]
-position = Vector2(725, 602)
-
-[node name="spikes8" parent="." unique_id=1590329967 instance=ExtResource("4_nu7sl")]
-position = Vector2(824, 602)
-
-[node name="spikes9" parent="." unique_id=2060412011 instance=ExtResource("4_nu7sl")]
-position = Vector2(31, 602)
-
-[node name="spikes10" parent="." unique_id=1049427582 instance=ExtResource("4_nu7sl")]
-position = Vector2(-69, 602)
-
-[node name="spikes11" parent="." unique_id=206641947 instance=ExtResource("4_nu7sl")]
-position = Vector2(924, 601)
-
-[node name="Door" parent="." unique_id=1116609605 instance=ExtResource("5_omks2")]
-position = Vector2(550, -4)
+[node name="level_0" type="Node2D"]
+script = ExtResource("1_level")
+level_number = 0

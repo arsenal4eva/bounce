@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://block.png" id="1_block"]
+[ext_resource type="PackedScene" path="res://spikes.tscn" id="2_spikes"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cube"]
+atlas = ExtResource("1_block")
+region = Rect2(64, 0, 54, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cube"]
+size = Vector2(32, 32)
+
+[node name="SpikeBlock" type="StaticBody2D"]
+z_index = 4
+collision_layer = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.6, 0.68, 0.9, 1)
+scale = Vector2(0.592593, 0.592593)
+texture = SubResource("AtlasTexture_cube")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cube")
+
+[node name="SpikeTop" parent="." instance=ExtResource("2_spikes")]
+position = Vector2(0, -32)
+
+[node name="SpikeBottom" parent="." instance=ExtResource("2_spikes")]
+position = Vector2(0, 32)
+rotation = 3.1415927
+
+[node name="SpikeLeft" parent="." instance=ExtResource("2_spikes")]
+position = Vector2(-32, 0)
+rotation = -1.5707964
+
+[node name="SpikeRight" parent="." instance=ExtResource("2_spikes")]
+position = Vector2(32, 0)
+rotation = 1.5707964

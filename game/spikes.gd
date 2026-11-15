@@ -1,15 +1,22 @@
 extends Node2D
 
-var curr = Global.currlevel
-# Called when the node enters the scene tree for the first time.
+var bouncy := true
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	add_to_group("damage")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func set_active(a: bool) -> void:
+	bouncy = a
+	var lebouncer: Area2D = $Area2D
+	lebouncer.set_deferred("monitoring", a)
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		body.global_position = Global.checkpoints[curr]
+
+func _on_area_2d_body_entered(skibidi: Node2D) -> void:
+	if not bouncy:
+		return
+	if skibidi is Player:
+		var lebounce := skibidi as Player
+		if lebounce.lelvl != null and lebounce.lelvl.has_method("player_hit"):
+			lebounce.lelvl.player_hit()

@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://c24f5n2pouly7"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://yuwv1nk55xwc" path="res://block.png" id="1_im0tn"]
+[ext_resource type="Texture2D" path="res://block.png" id="1_tex"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdn2g"]
-size = Vector2(48.5, 6)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_block"]
+size = Vector2(96, 32)
 
-[node name="block" type="Node2D" unique_id=1759571606]
+[node name="block" type="StaticBody2D"]
+z_index = 3
+collision_layer = 1
+collision_mask = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1177725253]
-position = Vector2(71, 213)
-scale = Vector2(0.26373628, 0.11111121)
-texture = ExtResource("1_im0tn")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.7, 1, 1)
+scale = Vector2(0.527473, 0.592593)
+texture = ExtResource("1_tex")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=301002174]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=811117738]
-position = Vector2(71, 213)
-shape = SubResource("RectangleShape2D_tdn2g")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_block")

@@ -1,39 +1,38 @@
-[gd_scene format=3 uid="uid://dvkwloa1bqnri"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b0nu1y8e5uwmf" path="res://oval-removebg-preview.png" id="1_cysje"]
-[ext_resource type="Script" uid="uid://bebtevghnd437" path="res://jump_pad.gd" id="1_h7ut2"]
-[ext_resource type="Script" uid="uid://cgfvjoxil4l43" path="res://sprite_2d.gd" id="2_dd87t"]
+[ext_resource type="Script" path="res://jump_pad.gd" id="1_pad"]
+[ext_resource type="Texture2D" path="res://trampoline.png" id="2_tex"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_17ubn"]
-size = Vector2(271.063, 190.59134)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_area"]
+size = Vector2(64, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeeh7"]
-size = Vector2(293.68958, 205.8473)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cast"]
+size = Vector2(60, 18)
 
-[node name="Node2D" type="Node2D" unique_id=597283379]
-script = ExtResource("1_h7ut2")
+[node name="JumpPad" type="Node2D"]
+z_index = 12
+script = ExtResource("1_pad")
 
-[node name="jump_pad" type="Sprite2D" parent="." unique_id=523813203]
-position = Vector2(1391, 273)
-scale = Vector2(1.0781252, 1.08125)
-skew = 0.37175512
-texture = ExtResource("1_cysje")
-script = ExtResource("2_dd87t")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(0, 2)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("2_tex")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1164244375]
-position = Vector2(1391, 273)
-scale = Vector2(1.0781252, 1.08125)
-skew = 0.37175512
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=949223171]
-position = Vector2(-4.480591, 3.970642)
-shape = SubResource("RectangleShape2D_17ubn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_area")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=737854236]
+[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
+position = Vector2(0, -12)
+enabled = false
+shape = SubResource("RectangleShape2D_cast")
+target_position = Vector2(46, 0)
+collision_mask = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=687004773]
-position = Vector2(1384.5425, 276.10693)
-skew = 0.37175512
-shape = SubResource("RectangleShape2D_oeeh7")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
